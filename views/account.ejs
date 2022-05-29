@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+    
+    <div class="account justify-content-center mt-3">
+        <!-- Enter username here -->
+        <div class="d-inline-flex flex-row">
+            <div class="p-2">
+                <p style="font-size: 25px;"><%= account.username %></p>
+            </div>
+            <div class="p-2">
+                <a href="/settings">
+                    <button class="edit btn btn-primary ms-3" style="border-color: black;">Edit Profile</button>
+                </a>
+                <a href="#"><i class="fa fa-solid fa-gear ms-3"></i></a>
+            </div>
+        </div>
+        <div class="bio">
+            <h5>Hello</h5>
+            <p>Description</p>
+        </div>
+        
+        <div class="posts">
+            <div class="container">
+                <div class="row row-cols-3">
+                    <% posts.forEach(post => { %>
+                        <div class="col">
+                            <div class="card d-inline-flex p-2 justify-content-center d-grid m-2 pt-4 ">
+                                <img src= 'images/<%= post.photo.contentType %>' class="card-img-top">
+                                <div class="card-body">
+                                    <h5> <%= post.title %> </h5>
+                                    <p> <%= post.content %> </p>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('partials/footer') %>

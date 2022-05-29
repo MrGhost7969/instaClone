@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+    <h1 class="m-5"> Post Something! </h1>
+    <form action="/post" method="post" enctype="multipart/form-data">
+        <div class="postBody">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02" name="fileType">
+                <label class="input-group-text" for="inputGroupFile02"> 
+                    <button class="btn btn-primary" type="submit">Upload</button> 
+                </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" name="title" id="title" class="form-control">
+                <label for="floatingInput">Title</label>
+            </div>
+            <div class = "form-floating">
+                <textarea class="form-control" name="content" id="paragraph" cols="30" rows="10"></textarea>
+                <label for="floatingInput">Description</label>
+            </div>
+        </div>
+    </form>
+<%- include('partials/footer') %>

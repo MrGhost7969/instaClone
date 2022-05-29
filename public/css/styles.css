@@ -1,0 +1,149 @@
+body {
+  text-align: center;
+  align-items: center;
+  background: rgba(var(--d87, 255, 255, 255), 1);
+  overflow-y: scroll;
+}
+
+footer {
+  padding-top: 40%;
+}
+
+.btn.edit{
+  color: black;
+  background-color: white;
+  padding: 5px 10px;
+}
+.edit:hover{
+  background-color: white;
+}
+
+.bio{
+  margin: 0 42%;
+  margin-top: 3em;
+  text-align: left;
+}
+
+.posts{
+  margin-top: 20%;
+}
+
+.postBody {
+  margin: 15%;
+}
+
+.navbar {
+  display: static;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.searchBar {
+  margin-right: 17%;
+}
+.navbar-brand {
+  margin-right: 15%;
+}
+
+
+/* ---------------sign in css-------------- */
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #faa4e2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f96deb;
+}
+
+.fa-gear{
+  color: rgba(0, 0, 0, 0.884);
+  font-size: larger;
+}

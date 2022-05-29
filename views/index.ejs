@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+    
+<!-- <div class="accountSection"> -->
+        <!--  -->
+<!-- </div> -->
+
+<!-- Output post made -->
+    <% posts.forEach(post => { %>
+        <div class="card d-inline-flex p-2 justify-content-center d-grid gap-3 m-4 pt-4 w-50">
+            <img src='images/<%= post.photo.contentType %>' class="card-img-top">
+            <div class="card-body">
+                <h5> <%= post.title %> </h5>
+                <p> <%= post.content %> </p>
+            </div>
+        </div>
+    <% }) %>
+<%- include('partials/footer') %>
