@@ -7,6 +7,35 @@
 <!-- Output post made -->
     <% posts.forEach(post => { %>
         <div class="card d-inline-flex p-2 justify-content-center d-grid gap-3 m-4 pt-4 w-50">
+            <div class="card-header" style="background-color: white; text-align: right;">
+
+                <!-- Bootstrap Modal -->
+                <div>
+                    <button type="button" class="btn options" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <h1>...</h1>
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Post Options</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body warn" style="text-align: left;">
+                              <a href="#">Report</a>
+                            </div>
+                            <div class="modal-body warn" style="text-align: left;">
+                              <a href="#">Unfollow</a>
+                            </div>
+                            <div class="modal-body nor" style="text-align: left;">
+                              <a href="#">Share to.</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            
             <img src='images/<%= post.photo.contentType %>' class="card-img-top">
             <div class="card-body">
                 <h5> <%= post.title %> </h5>

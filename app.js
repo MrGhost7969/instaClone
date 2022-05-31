@@ -19,13 +19,14 @@ const multer = require('multer');
 const posted = require('./model/post')
 const Account = require('./model/account')
 
+const settings = require('./views/settingsFolder/settingsRoute')
+
 const app = express();
 
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-app.use(express.static(__dirname + '/partials/settingsFolder'))
 
 // Define session objects
 app.use(session({
@@ -37,6 +38,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 const MONGO_URL = 'mongodb://localhost:27017/instaCloneDB';
 
@@ -60,7 +62,7 @@ const storage = multer.diskStorage({
         // Get the destination
         // null because it doesn't matter where user has its image
         //  V
-        cb(null, path.join(__dirname, '/images'))
+        cb(null, path.join(__dirname, "/public/images"))
     },
     filename: (req, file, cb) => {
         console.log(req.file);
@@ -71,6 +73,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Settings 
+app.use('/settingsFolder/settings', settings);
+
 // The Gets
 app.get('/', (req, res) => {
     // Find account
@@ -79,7 +84,6 @@ app.get('/', (req, res) => {
             res.render('index', {posts: posts})
             // console.log(loginInput);
         })
-
     } else {
         res.redirect('/login')
         console.log('Problem!')
@@ -123,7 +127,7 @@ app.post('/post', upload.single('fileType'), (req, res) => {
     const post = new posted({
         title: req.body.title,
         photo: {
-            data: fs.readFileSync(path.join(__dirname + "/images/" + req.file.filename)),
+            data: fs.readFileSync(path.join(__dirname + "/public/images/" + req.file.filename)),
             contentType: req.file.filename
         },
         content: req.body.content
@@ -183,14 +187,6 @@ app.post('/login', (req, res) => {
         }
     })
 })
-
-
-
-app.get('partials/../settings', (req, res) =>{
-    res.render('settings');
-})
-
-
 
 
 app.listen(3000, function() {

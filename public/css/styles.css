@@ -9,22 +9,22 @@ footer {
   padding-top: 40%;
 }
 
-.btn.edit{
+.btn.edit {
   color: black;
   background-color: white;
   padding: 5px 10px;
 }
-.edit:hover{
+.edit:hover {
   background-color: white;
 }
 
-.bio{
+.bio {
   margin: 0 42%;
   margin-top: 3em;
   text-align: left;
 }
 
-.posts{
+.posts {
   margin-top: 20%;
 }
 
@@ -44,7 +44,6 @@ footer {
 .navbar-brand {
   margin-right: 15%;
 }
-
 
 /* ---------------sign in css-------------- */
 
@@ -120,7 +119,21 @@ footer {
   border-top-right-radius: 0;
 }
 
+/* ---------------UI CSS------------ */
+button .options {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
 
+.warn a{
+  color: red;
+  text-decoration: none;
+}
+.nor a{
+  text-decoration: none;
+  color: black;
+}
 
 /* Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -143,7 +156,7 @@ footer {
   background: #f96deb;
 }
 
-.fa-gear{
+.fa-gear {
   color: rgba(0, 0, 0, 0.884);
   font-size: larger;
 }

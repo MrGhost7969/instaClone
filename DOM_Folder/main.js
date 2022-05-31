@@ -22,6 +22,6 @@ router.get('/account', (req, res) =>{
     }
 })
 
-module.exports = loginInput;
+module.exports = router;
 // Check if user's logged in
 // if(loginInput)
