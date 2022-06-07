@@ -74,7 +74,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Settings 
-app.use('/settingsFolder/settings', settings);
+app.use('/settings', settings);
 
 // The Gets
 app.get('/', (req, res) => {

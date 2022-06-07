@@ -4,8 +4,20 @@
         <!--  -->
 <!-- </div> -->
 
+<!-- Story Section -->
+<div class="story m-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="" alt="" srcset="" class="pfp-pic">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Output post made -->
     <% posts.forEach(post => { %>
+        
         <div class="card d-inline-flex p-2 justify-content-center d-grid gap-3 m-4 pt-4 w-50">
             <div class="card-header" style="background-color: white; text-align: right;">
 
@@ -35,7 +47,7 @@
                     </div>   
                 </div>
             </div>
-            
+
             <img src='images/<%= post.photo.contentType %>' class="card-img-top">
             <div class="card-body">
                 <h5> <%= post.title %> </h5>

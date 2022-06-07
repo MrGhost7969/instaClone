@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/settings', (req, res) =>{
+router.get('/', (req, res, next) =>{
     res.render('settings');
+    next()
 })
+
 
 module.exports = router;

@@ -160,3 +160,10 @@ button .options {
   color: rgba(0, 0, 0, 0.884);
   font-size: larger;
 }
+
+
+/* Settings CSS */
+
+.pfp-pic{
+  border-radius: 100%;
+}
